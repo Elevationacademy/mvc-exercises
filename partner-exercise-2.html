@@ -9,8 +9,8 @@
   </head>
 
   <body>
-    <input type="text" id="input">
-    <button id="submit">Submit</button>
+    <input type="text" id="textinput">
+    <button type="button" id="submitbutton">Submit</button>
     <div id="display"></div>
 
     <script>
@@ -19,8 +19,7 @@
         this.view = view;
 
         this.updateText = function () {
-          var text = $('#input').val();
-
+          var text = $('#textinput').val();
           // TODO: Manipulate the Model's data, then notify the view to render itself
         }
       }
@@ -35,8 +34,7 @@
 
       var controller = new Controller(model, view);
 
-      $('button').on('click', function (e) {
-        e.preventDefault();
+      $('#submitbutton').on('click', function () {
         controller.updateText();
       });
     </script>
