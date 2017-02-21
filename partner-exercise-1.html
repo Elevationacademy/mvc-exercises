@@ -6,10 +6,10 @@
   </head>
 
   <body>
-    <input type="text" id="input">
-    <button id="submit">Submit</button>
+    <input type="text" id="textinput">
+    <button type="button" id="submitbutton">Submit</button>
     <div id="display"></div>
-
+    
     <script>
       var Model = function () {
         this.text = null;
@@ -45,8 +45,7 @@
       var view = new View(model);
       var controller = new Controller(model, view);
 
-      var $button = $('button').on('click', function (e) {
-        e.preventDefault();
+      var $button = $('#submitbutton').on('click', function () {
         // call the right function here
       });
     </script>
